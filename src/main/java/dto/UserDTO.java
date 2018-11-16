@@ -1,10 +1,12 @@
 package dto;
 
+import java.io.Serializable;
+
 /**
  * @author cui jun on 2018/11/14.
  * @version 1.0
  */
-public class UserDTO {
+public class UserDTO implements Serializable {
 
     private Integer id ;
 
@@ -56,4 +58,14 @@ public class UserDTO {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", password='" + password + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
